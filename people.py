@@ -1,3 +1,4 @@
+print('                                             ')
 player_name = input("What is your name, detective?: ")
 
 def get_player_name():
