@@ -11,7 +11,7 @@ You also notice a small pool of blood on the stairs.""",
 
     "exits": {"up": "Lab", "east": "Cafe", "down": "Basement"},
 
-    "items": [item_pen],
+    "items": [item_pen, item_batteries],
     
     "people": [person_chief]
 }
@@ -69,7 +69,7 @@ room_parking = {
     """A bitter Tuesday, early morning, you have been called in to investigate the murder of a lecturer.
 You are outside, alone in the car park. The solitude is interrupted by the chief, calling you from the reception.""",
     "exits": {"east": "Reception"},
-    "items": [item_batteries, item_flashlight],
+    "items": [],
 
     "people": []
 
@@ -80,11 +80,11 @@ room_matts_office = {
 
     "description":
     """The door is slightly ajar, the lights are on but no one is around.
-There is a desk and a filing cabinet. Some of the drawers are open.""",
+There is a desk and a filing cabinet. You see an open bag...""",
 
     "exits": {"west": "Lab"},
 
-    "items": [],
+    "items": [item_nail_polish],
 
     "people": []
 
@@ -106,17 +106,16 @@ You notice a fire alarm on the wall, but there seems to be no way out.""",
     "people": []    
 }
 
-room_Andrews_office = {
+room_andrews_office = {
     "name": "Andrew Jones' office",
 
     "description":
-    """All the windows are open. Suddenly a huge gust of wind blows all
-    the papers that were lying on the desk onto the floor.
-    revealing a clip on tie and a half eaten sandwich.""",
+    """All of the windows are open. Various papers are scattered on the floor and 
+there's a half eaten sandwich on the desk.""",
 
     "exits": {"west": "Lecture Theatre", "east": "Lab"},
 
-    "items": [],
+    "items": [item_laptop, item_tie],
 
     "people": []
 }
@@ -143,7 +142,7 @@ room_security = {
     "description":"""The terminal reads "ENTER PASSCODE FOR CCTV FOOTAGE", there's not much else to do here.
     (Use the command "try" e.g. try 12345)""",
     "exits": {"south": "Lab"},
-    "items": [],
+    "items": [item_flashlight],
     "people": []
 }
 
@@ -163,7 +162,7 @@ rooms = {
     "Parking": room_parking,
     "Matts office": room_matts_office,
     "Lecture Theatre": room_lecture_theatre,
-    "Andrew Jones' office": room_Andrews_office,
+    "Andrew Jones' office": room_andrews_office,
     "Basement": room_basement,
     "Inner Basement": room_corpse,
     "Kitchen": room_kitchen,

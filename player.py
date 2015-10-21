@@ -1,7 +1,7 @@
 from items import *
 from map import rooms
 
-inventory = [item_money, item_badge, item_magnifying_glass]
+inventory = [item_money, item_badge, item_magnifying_glass, item_suspects]
 # Start game at the reception
 current_room = rooms["Parking"]
 

@@ -86,7 +86,8 @@ def help():
     print("COMBINE: Use two items to accomplish a purpose. (Use the separator word 'and' e.g. combine x and y)")
     print("INPUTCOUNT: Check how many inputs you've made (includes unaccepted commands!)")
 #    print("TIME: Check how long you've been playing.")
-    print("TRY: Enter a code. (Only works in a specific room.)")    
+    print("TRY: Enter a code. (Only works in a specific room.)")
+    print("There is a weight limit of 5kg.")
     
 def input_count(input_counter):
     print("Input count: ", input_counter)
@@ -97,8 +98,13 @@ def is_valid_exit(exits, chosen_exit):
 def execute_go(direction):
     global current_room
     if is_valid_exit(current_room["exits"], direction):
-        current_room = rooms[current_room["exits"][direction]]
-        return current_room
+        if (current_room["exits"][direction] == "Lab") and (event_inspector == False):  
+            print("You need an ID card to access the lab.") 
+        elif (current_room["exits"][direction] == "Basement") and (event_basement == False):
+            print("You need the basement key.")
+        else:
+            current_room = rooms[current_room["exits"][direction]]
+            return current_room
     else:
         print("You cannot go there.")
 
@@ -124,7 +130,7 @@ def execute_drop(item_id):
     pass
     Found = False
     for item in inventory:
-        if item["id"] == item_id:
+        if (item["id"] == item_id) and item_id != "id":
             Found = True
             break
     if Found == True:    
@@ -157,12 +163,18 @@ def execute_inspect(person_name):
         print("Who are you inspecting?")
             
 def execute_talk(person_name):
+    global event_inspector
     Found = False
     for people in current_room["people"]:
         if people["name"] == person_name:
             Found = True
             break
-    if Found == True:
+    if (((Found == True) and (person_name == "inspector")) and (event_inspector == False)):
+        print("Hello, Detective " + get_player_name() +", you can use this ID card to access the lab.")
+        print("(The chief gave you an ID card.)")
+        inventory.append(item_id)
+        event_inspector = True
+    elif (Found == True):
         print(people["speech"])
     else:
         print("Who are you talking to?")
@@ -189,7 +201,10 @@ def execute_combine(item_id1, item_id2):
                     if item["id"] == "cigarettes":
                         inventory.remove(item_cigarettes)
                         print("You light up a few cigarettes and hold them below the alarm, triggering it and overriding the automatically locked door. Nice job!")
+                        current_room["description"] = "There's nothing useful around here. The fire alarm is starting to hurt your ears."
                         current_room["exits"].update({"east":"Andrew Jones' office"})
+                        rooms["Andrew Jones' office"]["people"].append(person_technician)
+                        rooms["Matts office"]["items"].append(item_cctv_note)
                         break
     elif (("batteries" and "flashlight") in (item_id1 + item_id2)):
         for item in inventory:

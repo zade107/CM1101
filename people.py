@@ -10,8 +10,8 @@ person_chief = {
     """Inspecting the Inspector, huh?""",
 
     "speech":
-    "Hello, Detective " + get_player_name() +"."
-    
+#    "Hello, Detective " + get_player_name() +", you can use this ID card to access the lab."
+    "I hope you find the ID card useful."    
 }
 
 person_chef = {
