@@ -92,7 +92,7 @@ item_cctv_note = {
     "description": """The note says 51.
 It doesn't weigh much.""",
     "mass":0.01
-}#
+}#used
     
 item_lighter = {
     "id": "lighter",
@@ -106,7 +106,7 @@ item_deodorant= {
     "name": "a can of deodorant",
     "description": "A pressurised can of AKS male deodorant. It's hardly heavy.",
     "mass":0.125
-}#
+}#used
 
 item_walking_stick = {
     "id": "walking",
@@ -114,42 +114,42 @@ item_walking_stick = {
     "description": """A clean, polished walking stick. Smells like old wood.
 Must weigh around half a kilogram.""",
     "mass":0.5
-}#
+}#used
 
 item_glasses = {
     "id": "glasses",
     "name": "a pair of glasses",
     "description": "A pair of light, smashed glasses, looks like they fell to the floor and broke.",
     "mass":0.06
-}#
+}#used
 
 item_heels = {
     "id": "heels",
     "name": "a pair of heels",
     "description": "A pair of Brada heels, in Matt's size. They were stashed under his desk.",
     "mass":0.6
-}#
+}#used
 
 item_poison = {
     "id": "poison",
     "name": "a vial of poison",
     "description": "Empty, and since it's lying around here, you have a suspicion it was used recently.",
     "mass":0.01
-}#
+}#used
 
 item_photo = {
     "id": "photo",
     "name": "a photo",
-    "description": "It's stained in blood, you can just about make out some gray hair, and what looks like a corpse.",
+    "description": "It's stained in blood, you can just about make out some gray hair, and what looks like a corpse. Looks photoshopped.",
     "mass":0.01
-}#
+}#used
 
 item_nail_polish = {
     "id": "nail",
     "name":"a bottle of nail polish",
-    "description": "Belongs to Elouise, a suspect. How peculiar that it's in Norman's bag.",
+    "description": "Belongs to Elouise, a suspect. How peculiar that it was in Norman's bag.",
     "mass":0.04
-}#
+}#used
 
 item_tie = {
     "id": "tie",

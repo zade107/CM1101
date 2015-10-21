@@ -26,7 +26,7 @@ You can tell that the victim was here.""",
 
     "exits":  {"west": "Reception", "north": "Kitchen"},
 
-    "items": [item_biscuits],
+    "items": [item_biscuits, item_walking_stick],
     
     "people": [person_chef]
 
@@ -41,7 +41,7 @@ Your stomach grumbles.""",
     
     "exits": {"south": "Cafe"},
     
-    "items": [],
+    "items": [item_poison],
 
     "people": []
 
@@ -56,7 +56,7 @@ There is blood splattered on the glass windows.""",
 
     "exits": {"down": "Reception", "west": "Andrew Jones' office", "east": "Matts office", "north": "Security Room"},
 
-    "items": [item_handbook],
+    "items": [item_handbook, item_deodorant],
 
     "people": []
 
@@ -84,7 +84,7 @@ There is a desk and a filing cabinet. You see an open bag...""",
 
     "exits": {"west": "Lab"},
 
-    "items": [item_nail_polish],
+    "items": [item_nail_polish, item_heels],
 
     "people": []
 
@@ -132,7 +132,7 @@ room_basement = {
 all you see is old computer equipment and various tools.
 You then notice another door in front of you, but it's locked.""",
     "exits": {"up": "Reception", "north":"Inner Basement"}, 
-    "items": [],
+    "items": [item_glasses],
 
     "people": []
 }
